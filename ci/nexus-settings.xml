@@ -1,0 +1,18 @@
+<!-- Put your Nexus credentials and server config here. Save in Jenkins credentials and mount as settings.xml -->
+<settings>
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASS}</password>
+    </server>
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <name>Nexus mirror</name>
+      <url>http://YOUR_NEXUS_HOST:8081/repository/maven-public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+ </settings>
